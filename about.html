@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeoPhones - Про проєкт</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="bottom_info" aria-label="Інформація">
+        <ul class="menu">
+            <li><a href="index.html">Наш магазин</a></li>
+            <li><a href="about.html" aria-current="page">Про проєкт</a></li>
+            <li><a href="#">Новинки</a></li>
+            <li><a href="articles.html">Статті</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Про проєкт</h1>
+    </header>
+
+    <main class="content">
+        <p class="about-text">
+            NeoPhones - це сайт з характеристиками смартфонів. Якщо ви знаєте цікаву новину про новий
+            смартфон, заповніть форму нижче, і ми додамо її до розділу новинок.
+        </p>
+
+        <form class="news-form" action="#" method="post" enctype="multipart/form-data">
+            <h2>Реєстрація новини</h2>
+
+            <fieldset>
+                <legend>Про новину</legend>
+
+                <div class="form-grid">
+                    <div class="field field--wide">
+                        <label for="title">Заголовок новини</label>
+                        <input type="text" id="title" name="title" maxlength="120"
+                            placeholder="Наприклад: OnePlus 15 вийшов в Україні" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="category">Категорія</label>
+                        <select id="category" name="category" required>
+                            <option value="" selected disabled>Оберіть категорію</option>
+                            <option value="release">Новий смартфон</option>
+                            <option value="review">Огляд</option>
+                            <option value="compare">Порівняння</option>
+                            <option value="sale">Акція</option>
+                            <option value="other">Інше</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label for="phone">Про який смартфон</label>
+                        <input type="text" id="phone" name="phone" list="phones-list"
+                            placeholder="Почніть вводити назву">
+                        <datalist id="phones-list">
+                            <option value="OPPO Find X9 Ultra">
+                            <option value="OnePlus 15">
+                            <option value="Vivo X300 Ultra">
+                        </datalist>
+                    </div>
+
+                    <div class="field">
+                        <label for="date">Дата події</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="image">Зображення</label>
+                        <input type="file" id="image" name="image" accept="image/*">
+                    </div>
+
+                    <div class="field field--wide">
+                        <label for="summary">Короткий опис</label>
+                        <input type="text" id="summary" name="summary" maxlength="200"
+                            placeholder="Одне-два речення для анонсу">
+                    </div>
+
+                    <div class="field field--wide">
+                        <label for="text">Текст новини</label>
+                        <textarea id="text" name="text" rows="6" minlength="30" placeholder="Опишіть новину детальніше"
+                            required></textarea>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Про автора</legend>
+
+                <div class="form-grid">
+                    <div class="field">
+                        <label for="author">Ім'я</label>
+                        <input type="text" id="author" name="author" autocomplete="name" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="email">Електронна пошта</label>
+                        <input type="email" id="email" name="email" autocomplete="email" placeholder="name@example.com"
+                            required>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Публікація</legend>
+
+                <div class="radio-group">
+                    <label><input type="radio" name="status" value="draft" checked> Зберегти як чернетку</label>
+                    <label><input type="radio" name="status" value="publish"> Опублікувати одразу</label>
+                </div>
+
+                <label class="checkbox">
+                    <input type="checkbox" name="agree" required>
+                    Я підтверджую, що вказані дані достовірні, і погоджуюся на обробку даних
+                </label>
+            </fieldset>
+
+            <div class="form-actions">
+                <button type="reset" class="btn btn--glass">Очистити</button>
+                <button type="submit" class="btn btn--primary">Надіслати</button>
+            </div>
+        </form>
+    </main>
+</body>
+
+</html>

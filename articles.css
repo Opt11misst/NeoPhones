@@ -1,0 +1,117 @@
+
+nav.bottom_info a[aria-current="page"] {
+    background: rgba(255, 255, 255, 0.75);
+    font-weight: 700;
+}
+
+.articles {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.article {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+    align-items: center;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.72);
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 24px rgba(27, 34, 48, 0.08);
+}
+
+.article:nth-child(even) img {
+    order: 2;
+}
+
+.article img {
+    display: block;
+    width: 100%;
+    max-height: 20rem;
+    object-fit: contain;
+}
+
+.article h2 {
+    margin: 0 0 0.25rem;
+    font-size: 1.5rem;
+}
+
+.article-meta {
+    margin: 0 0 1rem;
+    font-size: 0.95rem;
+    color: rgba(27, 34, 48, 0.65);
+}
+
+.article p {
+    margin: 0 0 0.75rem;
+    font-size: 1.1rem;
+}
+
+
+.back-home a {
+    display: inline-block;
+    padding: 0.6rem 1.4rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 8px 24px rgba(27, 34, 48, 0.12);
+    color: #1B2230;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+
+.back-home {
+    position: fixed;                 
+    bottom: 1rem;                    
+    left: 50%;
+    transform: translateX(-50%);     
+    margin: 0;
+    width: max-content;
+
+    background: linear-gradient(135deg,
+                rgba(255, 255, 255, 0.60),
+                rgba(255, 255, 255, 0.22));
+    backdrop-filter: blur(18px) saturate(180%);
+    -webkit-backdrop-filter: blur(18px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.70);
+    border-radius: 999px;
+    box-shadow:
+        0 12px 32px rgba(27, 34, 48, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.95),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.30);
+    padding: 0.4rem;
+}
+
+.back-home a {
+    display: block;
+    padding: 0.5rem 1.4rem;
+    border-radius: 999px;
+    color: #1B2230;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.back-home a:hover,
+.back-home a:focus-visible {
+    background: rgba(255, 255, 255, 0.65); 
+    outline: none;
+}
+
+main.content {
+    padding-bottom: 5rem;
+}
+
+@media (max-width: 700px) {
+    .article {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .article img,
+    .article:nth-child(even) img {
+        order: -1;
+        max-height: 16rem;
+    }
+}
