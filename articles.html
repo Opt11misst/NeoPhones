@@ -7,6 +7,7 @@
     <title>NeoPhones - Статті</title>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="articles.css">
 </head>
 
 <body>
@@ -14,7 +15,7 @@
     <nav class="bottom_info" aria-label="Інформація">
         <ul class="menu">
             <li><a href="index.html">Наш магазин</a></li>
-            <li><a href="#">Про проєкт</a></li>
+            <li><a href="about.html">Про проєкт</a></li>
             <li><a href="#">Новинки</a></li>
             <li><a href="articles.html" aria-current="page">Статті</a></li>
         </ul>
@@ -25,12 +26,130 @@
     </header>
 
     <main class="content">
+        <p class="articles-intro">
+            Новини зі світу смартфонів і прості пояснення того, що означають цифри в специфікаціях.
+        </p>
+
         <div class="articles">
 
-            <article class="article">
+            <!-- ============ ГОЛОВНА СТАТТЯ: діафрагма ============ -->
+            <article class="article article--feature">
                 <div class="article-body">
+                    <p class="article-meta"><span class="tag">Камера</span> 5 хв читання</p>
+                    <h2>iPhone 18 Pro отримав змінну діафрагму - фішку, яку Samsung показала ще в Galaxy S9</h2>
+                    <p>Основна камера iPhone 18 Pro, за даними Tom's Guide, має моторизовану діафрагму з
+                        кількох лопатей, яка перемикається між f/1.48, f/1.8, f/2.8 та f/4.0. Для iPhone це
+                        перша змінна діафрагма.</p>
+                    <p>Сама ідея не нова. Ще у 2018 році Samsung Galaxy S9 мав механічну діафрагму з двома
+                        положеннями: f/1.5 у темряві й f/2.4 при гарному світлі. Samsung називала його першим
+                        смартфоном із подвійною діафрагмою. Згодом компанія відмовилась від цього рішення:
+                        Android Authority пише, що воно робило камеру товстішою й дорожчою, а за Engadget
+                        остання серія з ним - Galaxy S10.</p>
+                    <p><strong>Відкрита й закрита діафрагма простими словами.</strong> Чим менше число f,
+                        тим ширше отвір. Відкрита діафрагма (f/1.5) пропускає більше світла, тому вночі
+                        менше шуму, а тло за об'єктом розмивається. Закрита (f/2.4 і більше) пропускає менше
+                        світла, але різким стає майже весь кадр.</p>
+                </div>
+
+                <!-- Порівняння двох знімків. Замініть .photo-slot на <img>:
+                     <img src="img/aperture/f15.jpg" alt="Знімок на f/1.5"> -->
+                <figure class="compare">
+                    <div class="compare-grid">
+                        <div class="compare-item">
+                            <div class="photo-slot" role="img"
+                                aria-label="Місце для фото, зробленого на відкритій діафрагмі f/1.5">
+                                <span>Місце для фото</span>
+                            </div>
+                            <figcaption><strong>f/1.5, відкрита.</strong> Предмет у фокусі, тло розмите, у темряві менше
+                                шуму.</figcaption>
+                        </div>
+                        <div class="compare-item">
+                            <div class="photo-slot" role="img"
+                                aria-label="Місце для фото, зробленого на закритій діафрагмі f/2.4">
+                                <span>Місце для фото</span>
+                            </div>
+                            <figcaption><strong>f/2.4, закрита.</strong> Різкість по всьому кадру, більше деталей при
+                                денному світлі.</figcaption>
+                        </div>
+                    </div>
+                    <p class="figure-note">
+                        Реальні знімки поруч дивіться в
+                        <a href="https://m.gsmarena.com/samsung_galaxy_s9_plus-review-1736p7.php" target="_blank"
+                            rel="noopener">огляді Galaxy S9+ на GSMArena</a>:
+                        там рецензент порівнює f/1.5 і f/2.4 на одних і тих самих сценах.
+                    </p>
+                </figure>
+
+                <p class="article-source">
+                    Джерела:
+                    <a href="https://www.tomsguide.com/phones/iphones/iphone-18-pro-and-pro-max-variable-aperture-camera-explained-heres-what-it-actually-does"
+                        target="_blank" rel="noopener">Tom's Guide</a>,
+                    <a href="https://www.engadget.com/2253983/the-iphone-18-pros-camera-has-a-variable-aperture/"
+                        target="_blank" rel="noopener">Engadget</a>,
+                    <a href="https://www.androidauthority.com/apple-iphone-18-pro-variable-aperture-leak-3607246/"
+                        target="_blank" rel="noopener">Android Authority</a>,
+                    <a href="https://petapixel.com/2018/02/26/samsung-galaxy-s9-s9-boast-first-dual-aperture-lens/"
+                        target="_blank" rel="noopener">PetaPixel</a>
+                </p>
+            </article>
+
+            <!-- ============ Galaxy Z Fold8 ============ -->
+            <article class="article">
+                <div class="photo-slot" role="img" aria-label="Місце для фото Samsung Galaxy Z Fold8">
+                    <span>Місце для фото</span>
+                </div>
+                <div class="article-body">
+                    <p class="article-meta"><span class="tag">Екрани</span> 3 хв читання</p>
+                    <h2>Galaxy Z Fold8: внутрішній екран став майже квадратним</h2>
+                    <p>За даними Samsung, зовнішній екран Galaxy Z Fold8 має діагональ 5.5 дюйма й вужче
+                        співвідношення сторін, зручне для вертикальної прокрутки. Внутрішній - 7.6 дюйма,
+                        4:3, з роздільністю 1848 × 2448 і піковою яскравістю 3000 ніт.</p>
+                    <p>Для тих, хто верстає сайти, це ще один приклад того, що екрани складних смартфонів
+                        різняться за пропорціями. Інтерфейс варто перевіряти і на вузькому, і на майже
+                        квадратному вікні.</p>
+                    <p class="article-source">
+                        Джерела:
+                        <a href="https://r1.community.samsung.com/t5/galaxy-z/galaxy-z-fold-8-display-faqs/m-p/39751080"
+                            target="_blank" rel="noopener">Samsung Members</a>,
+                        <a href="https://www.tomsguide.com/phones/samsung-phones/galaxy-z-fold8-display-explained-why-content-native-aspect-ratios-matter"
+                            target="_blank" rel="noopener">Tom's Guide</a>
+                    </p>
+                </div>
+            </article>
+
+            <!-- ============ Жовтневі новинки ============ -->
+            <article class="article">
+                <div class="photo-slot" role="img" aria-label="Місце для фото новинок жовтня">
+                    <span>Місце для фото</span>
+                </div>
+                <div class="article-body">
+                    <p class="article-meta"><span class="tag">Новини</span> 2 хв читання</p>
+                    <h2>Що виходить у жовтні 2026</h2>
+                    <p>За підбіркою Gizmochina, на жовтень заплановано кілька цікавих анонсів:</p>
+                    <ul class="article-list">
+                        <li><strong>Vivo X Fold 6</strong> - екрани 8.02" і 6.51", чип Dimensity 9500 Super,
+                            батарея 7000 мАг, основна камера 200MP.</li>
+                        <li><strong>OnePlus 16</strong> - дебют у Китаї 12 жовтня, батарея 9000 мАг,
+                            основна камера 200MP.</li>
+                        <li><strong>Oppo Find X10</strong> - орієнтовно наприкінці місяця, батарея 8000 мАг,
+                            200MP основна і 200MP перископна камери.</li>
+                    </ul>
+                    <p class="article-note">Це заплановані анонси, тому остаточні характеристики можуть
+                        відрізнятися.</p>
+                    <p class="article-source">
+                        Джерело:
+                        <a href="https://www.gizmochina.com/2026/09/30/top-5-upcoming-smartphones-in-october-2026/"
+                            target="_blank" rel="noopener">Gizmochina</a>
+                    </p>
+                </div>
+            </article>
+
+            <!-- ============ 200MP ============ -->
+            <article class="article">
+                <img src="img/Vivo_x300_ultra/2.png" alt="Задня панель Vivo X300 Ultra з модулем камер">
+                <div class="article-body">
+                    <p class="article-meta"><span class="tag">Камера</span> 3 хв читання</p>
                     <h2>Що означає 200MP у камері смартфона</h2>
-                    <p class="article-meta">3 хв читання</p>
                     <p>Кількість мегапікселів сама по собі не гарантує якісне фото. Набагато більше залежать
                         розмір сенсора, оптика та обробка зображення.</p>
                     <p>Сенсори на 200MP зазвичай об'єднують сусідні пікселі в один (pixel binning). Так камера
@@ -39,10 +158,12 @@
                 </div>
             </article>
 
+            <!-- ============ Яскравість ============ -->
             <article class="article">
+                <img src="img/Oneplus_15/1.png" alt="Фронтальна панель OnePlus 15">
                 <div class="article-body">
+                    <p class="article-meta"><span class="tag">Екрани</span> 3 хв читання</p>
                     <h2>Яскравість у нітах: скільки потрібно екрану</h2>
-                    <p class="article-meta">3 хв читання</p>
                     <p>Ніт - це одиниця яскравості, один ніт дорівнює одній канделі на квадратний метр. Чим
                         вона вища, тим краще читається екран на сонці.</p>
                     <p>Виробники часто вказують піковий показник, який екран видає лише на невеликій ділянці
@@ -51,10 +172,12 @@
                 </div>
             </article>
 
+            <!-- ============ Телефото і ширококутна ============ -->
             <article class="article">
+                <img src="img/Oppo_find_x9_ultra/2.png" alt="Задня панель OPPO Find X9 Ultra з модулем камер">
                 <div class="article-body">
+                    <p class="article-meta"><span class="tag">Камера</span> 4 хв читання</p>
                     <h2>Телефото та ширококутна: навіщо кілька камер</h2>
-                    <p class="article-meta">4 хв читання</p>
                     <p>Ширококутна камера вміщує у кадр більше простору, тому підходить для пейзажів і
                         архітектури. Телефото наближає віддалені об'єкти, наприклад для портретів чи
                         спорту.</p>
@@ -64,11 +187,12 @@
             </article>
 
         </div>
-
-        <p class="back-home">
-            <a href="index.html">&larr; На головну</a>
-        </p>
     </main>
+
+    <!-- Плаваюча скляна кнопка, закріплена знизу -->
+    <p class="back-home">
+        <a href="index.html">&larr; На головну</a>
+    </p>
 </body>
 
 </html>

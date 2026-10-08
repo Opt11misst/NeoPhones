@@ -1,85 +1,612 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NeoPhones</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
 
     <nav class="bottom_info" aria-label="Інформація">
         <ul class="menu">
-            <li><a href="#">Наш магазин</a></li>
+            <li><a href="index.html" aria-current="page">Наш магазин</a></li>
             <li><a href="about.html">Про проєкт</a></li>
-            <li><a href="#">Новинки</a></li>
             <li><a href="articles.html">Статті</a></li>
         </ul>
     </nav>
 
     <header>
-        <h1>Сайт з характеристками смартфонів</h1>
+        <h1>Сайт з характеристиками смартфонів</h1>
     </header>
+
     <main class="content">
-        <div class="items">
-            <div class="phone1-front">
-                <h3>OPPO Find X9 Ultra</h3>
-                <ul class="Oppo-specs">
-                    <li>6.82'' AMOLED дисплей</li>
-                    <li>1800 ніт яскравості</li>
-                    <li>Роздільна здатність 3168х1440</li>
-                    <li>Фронтальна камера - Samsung ISOCELL JN5 (50MP)</li>
-                </ul>
-                <img src="img/Oppo_find_x9_ultra/1.png" alt="#">
-            </div>
-            <div class="phone1-back">
-                <ul class="Oppo-specs1">
-                    <li>Основна камера - Sony LYT-901 (200MP) </li>
-                    <li>Теле-фото камера - Omnivision OV52A (200MP)</li>
-                    <li>Теле-фото камера - Samsung S5KJN1 (50MP)</li>
-                    <li>Широкоформатна камера - Sony LYT-600(50MP)</li>
-                </ul>
-                <img src="img/Oppo_find_x9_ultra/2.png" alt="#">
-            </div>
-            <div class="phone2-front">
-                <h3>OnePlus 15</h3>
-                <ul class="Oneplus-specs">
-                    <li>6.78'' LTPO AMOLED дисплей</li>
-                    <li>1800 ніт яскравості</li>
-                    <li>Роздільна здатність 2772x1272</li>
-                    <li>Фронтальна камера - Sony IMX709 (32MP)</li>
-                </ul>
-                <img src="img/Oneplus_15/1.png" alt="">
-            </div>
-            <div class="phone2-back">
-                <ul class="Oneplus-specs1">
-                    <li>Основна камера - 50MP</li>
-                    <li>Теле-фото камера - 50MP</li>
-                    <li>Широкоформатна камера - 50MP</li>
-                </ul>
-                <img src="img/Oneplus_15/2.png" alt="">
-            </div>
-            <div class="phone3-front">
-                <h3>Vivo X300 Ultra</h3>
-                <ul class="Vivo-specs">
-                    <li>6.82'' AMOLED дисплей</li>
-                    <li>4500 нітів яскравості</li>
-                    <li>Роздільна здатність 3168x1440</li>
-                    <li>Фронтальна камера - 50MP</li>
-                </ul>
-                <img src="img/Vivo_x300_ultra/1.png" alt="">
-            </div>
-            <div class="phone3-back">
-                <ul class="Vivo-specs1">
-                    <li>Основна камера - Sony LYT-901 (200MP)</li>
-                    <li>Теле-фото камера - 200MP</li>
-                    <li>Широкоформатна камера - Sony LYT-818 (50MP)</li>
-                </ul>
-                <img src="img/Vivo_x300_ultra/2.png" alt="">
-            </div>
+        <p class="phones-intro">
+            Екрани, процесори, акумулятори й камери флагманів в одному місці.
+        </p>
+
+        <!-- Швидкий перехід до потрібної моделі -->
+        <ul class="phone-nav" aria-label="Моделі">
+            <li><a href="#oppo-find-x9-ultra">OPPO Find X9 Ultra</a></li>
+            <li><a href="#oneplus-15">OnePlus 15</a></li>
+            <li><a href="#vivo-x300-ultra">Vivo X300 Ultra</a></li>
+            <li><a href="#xiaomi-18-fold">Xiaomi 18 Fold</a></li>
+            <li><a href="#vivo-x500-pro-max">Vivo X500 Pro Max</a></li>
+            <li><a href="#honor-magic-9-pro">Honor Magic 9 Pro</a></li>
+        </ul>
+
+        <div class="phones">
+
+            <article class="phone" id="oppo-find-x9-ultra">
+                <header class="phone-head">
+                    <h2>OPPO Find X9 Ultra</h2>
+
+                </header>
+
+                <div class="phone-row">
+                    <div class="phone-media">
+                        <img src="img/Oppo_find_x9_ultra/1.png" alt="Передня панель OPPO Find X9 Ultra">
+                    </div>
+                    <div class="phone-specs">
+                        <h3 class="specs-title">Екран</h3>
+                        <dl class="specs">
+                            <div>
+                                <dt>Дисплей</dt>
+                                <dd>6.82&quot; LTPO AMOLED</dd>
+                            </div>
+                            <div>
+                                <dt>Роздільна здатність</dt>
+                                <dd>3168 × 1440 (QHD+)</dd>
+                            </div>
+                            <div>
+                                <dt>Частота оновлення</dt>
+                                <dd>144 Гц</dd>
+                            </div>
+                            <div>
+                                <dt>Яскравість</dt>
+                                <dd>1800 ніт</dd>
+                            </div>
+                        </dl>
+                        <h3 class="specs-title">Платформа і живлення</h3>
+                        <dl class="specs">
+                            <div>
+                                <dt>Процесор</dt>
+                                <dd>Snapdragon 8 Elite Gen 5</dd>
+                            </div>
+                            <div>
+                                <dt>Пам&#x27;ять</dt>
+                                <dd>12 ГБ ОЗП, 512 ГБ UFS 4.1</dd>
+                            </div>
+                            <div>
+                                <dt>Акумулятор</dt>
+                                <dd>7050 мАг</dd>
+                            </div>
+                            <div>
+                                <dt>Зарядка</dt>
+                                <dd>100 Вт дротова, 50 Вт бездротова</dd>
+                            </div>
+                            <div>
+                                <dt>Вага</dt>
+                                <dd>236 г</dd>
+                            </div>
+                            <div>
+                                <dt>Система</dt>
+                                <dd>Android 16, ColorOS</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+
+                <div class="phone-row">
+                    <div class="phone-specs">
+                        <h3 class="specs-title">Камери</h3>
+                        <dl class="specs">
+                            <div>
+                                <dt>Основна</dt>
+                                <dd>200 Мп, Sony LYT-901, f/1.5</dd>
+                            </div>
+                            <div>
+                                <dt>Телефото</dt>
+                                <dd>200 Мп, OmniVision OV52A, f/2.2</dd>
+                            </div>
+                            <div>
+                                <dt>Телефото 2</dt>
+                                <dd>50 Мп, Samsung S5KJN1, f/3.5</dd>
+                            </div>
+                            <div>
+                                <dt>Ширококутна</dt>
+                                <dd>50 Мп, Sony LYT-600, f/2.0</dd>
+                            </div>
+                            <div>
+                                <dt>Фронтальна</dt>
+                                <dd>50 Мп, Samsung ISOCELL JN5, f/2.4</dd>
+                            </div>
+                        </dl>
+                    </div>
+                    <div class="phone-media">
+                        <img src="img/Oppo_find_x9_ultra/2.png" alt="Задня панель OPPO Find X9 Ultra з модулем камер">
+                    </div>
+                </div>
+            </article>
+            <article class="phone" id="oneplus-15">
+                <header class="phone-head">
+                    <h2>OnePlus 15</h2>
+
+                </header>
+
+                <div class="phone-row">
+                    <div class="phone-media">
+                        <img src="img/Oneplus_15/1.png" alt="Передня панель OnePlus 15">
+                    </div>
+                    <div class="phone-specs">
+                        <h3 class="specs-title">Екран</h3>
+                        <dl class="specs">
+                            <div>
+                                <dt>Дисплей</dt>
+                                <dd>6.78&quot; LTPO AMOLED</dd>
+                            </div>
+                            <div>
+                                <dt>Роздільна здатність</dt>
+                                <dd>2772 × 1272</dd>
+                            </div>
+                            <div>
+                                <dt>Частота оновлення</dt>
+                                <dd>165 Гц</dd>
+                            </div>
+                            <div>
+                                <dt>Яскравість</dt>
+                                <dd>1800 ніт (HBM)</dd>
+                            </div>
+                        </dl>
+                        <h3 class="specs-title">Платформа і живлення</h3>
+                        <dl class="specs">
+                            <div>
+                                <dt>Процесор</dt>
+                                <dd>Snapdragon 8 Elite Gen 5</dd>
+                            </div>
+                            <div>
+                                <dt>Пам&#x27;ять</dt>
+                                <dd>12 ГБ ОЗП, 256 ГБ UFS 4.1</dd>
+                            </div>
+                            <div>
+                                <dt>Акумулятор</dt>
+                                <dd>7300 мАг</dd>
+                            </div>
+                            <div>
+                                <dt>Зарядка</dt>
+                                <dd>120 Вт дротова, 50 Вт бездротова</dd>
+                            </div>
+                            <div>
+                                <dt>Вага</dt>
+                                <dd>211 г</dd>
+                            </div>
+                            <div>
+                                <dt>Захист</dt>
+                                <dd>IP66, IP68, IP69, IP69K</dd>
+                            </div>
+                            <div>
+                                <dt>Система</dt>
+                                <dd>Android 16, OxygenOS 16</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+
+                <div class="phone-row">
+                    <div class="phone-specs">
+                        <h3 class="specs-title">Камери</h3>
+                        <dl class="specs">
+                            <div>
+                                <dt>Основна</dt>
+                                <dd>50 Мп, Sony IMX906, f/1.8, OIS</dd>
+                            </div>
+                            <div>
+                                <dt>Телефото</dt>
+                                <dd>50 Мп, f/2.8, оптичний зум 3.5x</dd>
+                            </div>
+                            <div>
+                                <dt>Ширококутна</dt>
+                                <dd>50 Мп, f/2.0</dd>
+                            </div>
+                            <div>
+                                <dt>Фронтальна</dt>
+                                <dd>32 Мп, Sony IMX709, f/2.4</dd>
+                            </div>
+                        </dl>
+                    </div>
+                    <div class="phone-media">
+                        <img src="img/Oneplus_15/2.png" alt="Задня панель OnePlus 15">
+                    </div>
+                </div>
+            </article>
+            <article class="phone" id="vivo-x300-ultra">
+                <header class="phone-head">
+                    <h2>Vivo X300 Ultra</h2>
+
+                </header>
+
+                <div class="phone-row">
+                    <div class="phone-media">
+                        <img src="img/Vivo_x300_ultra/1.png" alt="Передня панель Vivo X300 Ultra">
+                    </div>
+                    <div class="phone-specs">
+                        <h3 class="specs-title">Екран</h3>
+                        <dl class="specs">
+                            <div>
+                                <dt>Дисплей</dt>
+                                <dd>6.82&quot; AMOLED</dd>
+                            </div>
+                            <div>
+                                <dt>Роздільна здатність</dt>
+                                <dd>3168 × 1440 (QHD+)</dd>
+                            </div>
+                            <div>
+                                <dt>Частота оновлення</dt>
+                                <dd>144 Гц, ШІМ 2160 Гц</dd>
+                            </div>
+                            <div>
+                                <dt>Яскравість</dt>
+                                <dd>4500 ніт (пік)</dd>
+                            </div>
+                        </dl>
+                        <h3 class="specs-title">Платформа і живлення</h3>
+                        <dl class="specs">
+                            <div>
+                                <dt>Процесор</dt>
+                                <dd>Snapdragon 8 Elite Gen 5</dd>
+                            </div>
+                            <div>
+                                <dt>Пам&#x27;ять</dt>
+                                <dd>16 ГБ ОЗП, 512 ГБ UFS 4.1</dd>
+                            </div>
+                            <div>
+                                <dt>Акумулятор</dt>
+                                <dd>6600 мАг</dd>
+                            </div>
+                            <div>
+                                <dt>Зарядка</dt>
+                                <dd>100 Вт дротова, 40 Вт бездротова</dd>
+                            </div>
+                            <div>
+                                <dt>Вага</dt>
+                                <dd>232 г</dd>
+                            </div>
+                            <div>
+                                <dt>Захист</dt>
+                                <dd>IP68, IP69</dd>
+                            </div>
+                            <div>
+                                <dt>Система</dt>
+                                <dd>Android 16, OriginOS 6</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+
+                <div class="phone-row">
+                    <div class="phone-specs">
+                        <h3 class="specs-title">Камери</h3>
+                        <dl class="specs">
+                            <div>
+                                <dt>Основна</dt>
+                                <dd>200 Мп, Sony LYTIA 901, f/1.85</dd>
+                            </div>
+                            <div>
+                                <dt>Телефото</dt>
+                                <dd>200 Мп, f/2.67, оптичний зум 3.7x</dd>
+                            </div>
+                            <div>
+                                <dt>Ширококутна</dt>
+                                <dd>50 Мп, Sony LYT-818, f/2.0</dd>
+                            </div>
+                            <div>
+                                <dt>Фронтальна</dt>
+                                <dd>50 Мп, f/2.45, автофокус</dd>
+                            </div>
+                        </dl>
+                    </div>
+                    <div class="phone-media">
+                        <img src="img/Vivo_x300_ultra/2.png" alt="Задня панель Vivo X300 Ultra з модулем камер">
+                    </div>
+                </div>
+            </article>
+            <article class="phone" id="xiaomi-18-fold">
+                <header class="phone-head">
+                    <h2>Xiaomi 18 Fold</h2>
+                    <span class="tag">Новинка</span>
+                </header>
+
+                <div class="phone-row">
+                    <div class="phone-media">
+                        <img src="img/Xiaomi18_fold/4157665.jpeg.webp" alt="Xiaomi 18 Fold у розкладеному вигляді">
+                    </div>
+                    <div class="phone-specs">
+                        <h3 class="specs-title">Екран</h3>
+                        <dl class="specs">
+                            <div>
+                                <dt>Внутрішній екран</dt>
+                                <dd>7.58&quot; AMOLED, 1672 × 2364</dd>
+                            </div>
+                            <div>
+                                <dt>Зовнішній екран</dt>
+                                <dd>5.38&quot; AMOLED, 1168 × 1712</dd>
+                            </div>
+                            <div>
+                                <dt>Частота оновлення</dt>
+                                <dd>120 Гц</dd>
+                            </div>
+                            <div>
+                                <dt>Яскравість</dt>
+                                <dd>4000 ніт (внутрішній)</dd>
+                            </div>
+                        </dl>
+                        <h3 class="specs-title">Платформа і живлення</h3>
+                        <dl class="specs">
+                            <div>
+                                <dt>Процесор</dt>
+                                <dd>Xiaomi Xring O3</dd>
+                            </div>
+                            <div>
+                                <dt>Пам&#x27;ять</dt>
+                                <dd>12 ГБ ОЗП, 256 ГБ</dd>
+                            </div>
+                            <div>
+                                <dt>Акумулятор</dt>
+                                <dd>6000 мАг</dd>
+                            </div>
+                            <div>
+                                <dt>Зарядка</dt>
+                                <dd>67 Вт дротова, 50 Вт бездротова</dd>
+                            </div>
+                            <div>
+                                <dt>Вага</dt>
+                                <dd>219 г</dd>
+                            </div>
+                            <div>
+                                <dt>Захист</dt>
+                                <dd>IP68</dd>
+                            </div>
+                            <div>
+                                <dt>Система</dt>
+                                <dd>Android 17, HyperOS</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+
+                <div class="phone-row">
+                    <div class="phone-specs">
+                        <h3 class="specs-title">Камери</h3>
+                        <dl class="specs">
+                            <div>
+                                <dt>Основна</dt>
+                                <dd>200 Мп, f/1.7</dd>
+                            </div>
+                            <div>
+                                <dt>Телефото</dt>
+                                <dd>50 Мп, f/2.8, оптичний зум 3.5x</dd>
+                            </div>
+                            <div>
+                                <dt>Ширококутна</dt>
+                                <dd>50 Мп, f/2.4</dd>
+                            </div>
+                            <div>
+                                <dt>Фронтальна</dt>
+                                <dd>16 Мп, f/2.2</dd>
+                            </div>
+                        </dl>
+                    </div>
+                    <div class="phone-media">
+                        <img src="img/Xiaomi18_fold/images.jpg" alt="Задня панель Xiaomi 18 Fold">
+                    </div>
+                </div>
+                <p class="phone-note">Офіційна назва моделі - Xiaomi 18 Fold (без слова Pro). Характеристики подано за
+                    даними 91mobiles, де модель ще позначена як очікувана, тому цифри можуть уточнюватись.</p>
+            </article>
+            <article class="phone" id="vivo-x500-pro-max">
+                <header class="phone-head">
+                    <h2>Vivo X500 Pro Max</h2>
+                    <span class="tag">Новинка</span>
+                </header>
+
+                <div class="phone-row">
+                    <div class="phone-media">
+                        <img src="img/Vivo_x500Promax/1.jpg" alt="Передня панель Vivo X500 Pro Max">
+                    </div>
+                    <div class="phone-specs">
+                        <h3 class="specs-title">Екран</h3>
+                        <dl class="specs">
+                            <div>
+                                <dt>Дисплей</dt>
+                                <dd>6.85&quot; LTPO AMOLED</dd>
+                            </div>
+                            <div>
+                                <dt>Роздільна здатність</dt>
+                                <dd>3168 × 1440 (QHD+)</dd>
+                            </div>
+                            <div>
+                                <dt>Частота оновлення</dt>
+                                <dd>144 Гц</dd>
+                            </div>
+                            <div>
+                                <dt>Яскравість</dt>
+                                <dd>4400 ніт (пік)</dd>
+                            </div>
+                        </dl>
+                        <h3 class="specs-title">Платформа і живлення</h3>
+                        <dl class="specs">
+                            <div>
+                                <dt>Процесор</dt>
+                                <dd>MediaTek Dimensity 9600 Pro, 2 нм</dd>
+                            </div>
+                            <div>
+                                <dt>Пам&#x27;ять</dt>
+                                <dd>12 або 16 ГБ ОЗП, 256 ГБ - 1 ТБ</dd>
+                            </div>
+                            <div>
+                                <dt>Акумулятор</dt>
+                                <dd>8000 мАг</dd>
+                            </div>
+                            <div>
+                                <dt>Зарядка</dt>
+                                <dd>90 Вт дротова, 40 Вт бездротова</dd>
+                            </div>
+                            <div>
+                                <dt>Вага</dt>
+                                <dd>225 або 229 г</dd>
+                            </div>
+                            <div>
+                                <dt>Захист</dt>
+                                <dd>IP68, IP69</dd>
+                            </div>
+                            <div>
+                                <dt>Система</dt>
+                                <dd>Android 17, OriginOS 7</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+
+                <div class="phone-row">
+                    <div class="phone-specs">
+                        <h3 class="specs-title">Камери</h3>
+                        <dl class="specs">
+                            <div>
+                                <dt>Основна</dt>
+                                <dd>50 Мп, f/1.6, 1/1.28&quot;, OIS</dd>
+                            </div>
+                            <div>
+                                <dt>Телефото</dt>
+                                <dd>200 Мп, f/2.7, перископ, зум 3.5x</dd>
+                            </div>
+                            <div>
+                                <dt>Ширококутна</dt>
+                                <dd>50 Мп, f/2.0, 119°</dd>
+                            </div>
+                            <div>
+                                <dt>Фронтальна</dt>
+                                <dd>50 Мп, f/2.0, автофокус</dd>
+                            </div>
+                        </dl>
+                    </div>
+                    <div class="phone-media">
+                        <img src="img/Vivo_x500Promax/2.png" alt="Задня панель Vivo X500 Pro Max">
+                    </div>
+                </div>
+                <p class="phone-note">Анонсований 21 вересня 2026, у продажу з 24 вересня (GSMArena).</p>
+            </article>
+            <article class="phone" id="honor-magic-9-pro">
+                <header class="phone-head">
+                    <h2>Honor Magic 9 Pro</h2>
+                    <span class="tag">Новинка</span>
+                </header>
+
+                <div class="phone-row">
+                    <div class="phone-media">
+                        <img src="img/Honor_Magic9pro/magic-9-pro-max.jpg" alt="Передня панель Honor Magic 9 Pro">
+                    </div>
+                    <div class="phone-specs">
+                        <h3 class="specs-title">Екран</h3>
+                        <dl class="specs">
+                            <div>
+                                <dt>Дисплей</dt>
+                                <dd>6.85&quot; OLED</dd>
+                            </div>
+                            <div>
+                                <dt>Роздільна здатність</dt>
+                                <dd>2808 × 1256</dd>
+                            </div>
+                            <div>
+                                <dt>Частота оновлення</dt>
+                                <dd>120 Гц</dd>
+                            </div>
+                            <div>
+                                <dt>Яскравість</dt>
+                                <dd>1800 ніт (HBM), 6000 ніт (пік)</dd>
+                            </div>
+                        </dl>
+                        <h3 class="specs-title">Платформа і живлення</h3>
+                        <dl class="specs">
+                            <div>
+                                <dt>Пам&#x27;ять</dt>
+                                <dd>12 ГБ ОЗП, 512 ГБ UFS 4</dd>
+                            </div>
+                            <div>
+                                <dt>Акумулятор</dt>
+                                <dd>7500 мАг</dd>
+                            </div>
+                            <div>
+                                <dt>Зарядка</dt>
+                                <dd>100 Вт дротова, 80 Вт бездротова</dd>
+                            </div>
+                            <div>
+                                <dt>Захист</dt>
+                                <dd>IP69</dd>
+                            </div>
+                            <div>
+                                <dt>Система</dt>
+                                <dd>Android 17</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+
+                <div class="phone-row">
+                    <div class="phone-specs">
+                        <h3 class="specs-title">Камери</h3>
+                        <dl class="specs">
+                            <div>
+                                <dt>Основна</dt>
+                                <dd>200 Мп, f/1.6</dd>
+                            </div>
+                            <div>
+                                <dt>Телефото</dt>
+                                <dd>200 Мп, f/2.6</dd>
+                            </div>
+                            <div>
+                                <dt>Ширококутна</dt>
+                                <dd>50 Мп, f/2.0</dd>
+                            </div>
+                            <div>
+                                <dt>Фронтальна</dt>
+                                <dd>50 Мп, f/2.0</dd>
+                            </div>
+                        </dl>
+                    </div>
+                    <div class="phone-media">
+                        <img src="img/Honor_Magic9pro/media-uuf9mruv9kj5ubfh7pf5jop7.png"
+                            alt="Задня панель Honor Magic 9 Pro">
+                    </div>
+                </div>
+                <p class="phone-note">Серія Magic 9 включає Magic 9, Magic 9 Pro і Magic 9 Pro Max. Для Pro дані взято
+                    зі Smartprix, де вказано очікуваний вихід 15 жовтня 2026. Процесор і вага в цьому джерелі не
+                    наведені.</p>
+            </article>
         </div>
+
+        <section class="sources">
+            <h2>Джерела характеристик</h2>
+            <ul>
+                <li><a href="https://www.91mobiles.com/oppo-find-x9-ultra-price-in-india?ty=specs" target="_blank"
+                        rel="noopener">91mobiles - OPPO Find X9 Ultra</a></li>
+                <li><a href="https://www.smartprix.com/mobiles/oneplus-15-ppd1kq6wmua1" target="_blank"
+                        rel="noopener">Smartprix - OnePlus 15</a></li>
+                <li><a href="https://us.smartprix.com/mobiles/vivo-x300-ultra-ppd1i5d5dvnf" target="_blank"
+                        rel="noopener">Smartprix - vivo X300 Ultra</a></li>
+                <li><a href="https://www.91mobiles.com/xiaomi-18-fold-price-in-india" target="_blank"
+                        rel="noopener">91mobiles - Xiaomi 18 Fold</a></li>
+                <li><a href="https://www.gsmarena.com/vivo_x500_pro_max_5g-14782.php" target="_blank"
+                        rel="noopener">GSMArena - vivo X500 Pro Max</a></li>
+                <li><a href="https://www.smartprix.com/mobiles/honor-magic-9-pro-ppd1647ajpeu" target="_blank"
+                        rel="noopener">Smartprix - Honor Magic 9 Pro</a></li>
+                <li><a href="https://www.gizmochina.com/2026/09/14/honor-magic-9-series-variants-colors-specs-revealed/"
+                        target="_blank" rel="noopener">Gizmochina - серія Honor Magic 9</a></li>
+            </ul>
+        </section>
     </main>
 </body>
 

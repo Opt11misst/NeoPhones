@@ -1,7 +1,46 @@
+/* =========================================================
+   СТОРІНКА "СТАТТІ" - повний файл
+   Підключається в articles.html окремим <link>:
+     <link rel="stylesheet" href="articles.css">
+   Якщо раніше вставляли стилі статей у style.css - видаліть їх.
 
-nav.bottom_info a[aria-current="page"] {
-    background: rgba(255, 255, 255, 0.75);
-    font-weight: 700;
+   Стилістика збігається зі сторінкою "Про проєкт":
+   заголовок по центру, картки з м'якою тінню, бірюзовий акцент.
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   1. ШАПКА І ВСТУП: по центру
+   body:has(.articles) - діє лише на цій сторінці
+   --------------------------------------------------------- */
+body:has(.articles) header {
+    max-width: 760px;
+    margin: 0 auto 1rem;
+    text-align: center;
+}
+
+body:has(.articles) header h1 {
+    margin: 0;
+    font-size: 2.4rem;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+}
+
+.articles-intro {
+    max-width: 56ch;
+    margin: 0 auto 2rem;
+    text-align: center;
+    font-size: 1.15rem;
+    color: rgba(27, 34, 48, 0.78);
+}
+
+
+/* ---------------------------------------------------------
+   2. КОНТЕНТ: колонка по центру, місце під плаваючу кнопку
+   --------------------------------------------------------- */
+main.content:has(.articles) {
+    max-width: 980px;
+    padding-bottom: 6rem;
 }
 
 .articles {
@@ -9,22 +48,31 @@ nav.bottom_info a[aria-current="page"] {
     gap: 1.5rem;
 }
 
+
+/* ---------------------------------------------------------
+   3. КАРТКА СТАТТІ: фото + текст у двох колонках
+   --------------------------------------------------------- */
 .article {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 2rem;
     align-items: center;
-    padding: 1.5rem;
-    background: rgba(255, 255, 255, 0.72);
-    border-radius: 1.5rem;
-    box-shadow: 0 8px 24px rgba(27, 34, 48, 0.08);
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 1.75rem;
+    box-shadow:
+        0 18px 48px rgba(27, 34, 48, 0.10),
+        0 2px 6px rgba(27, 34, 48, 0.04);
 }
 
-.article:nth-child(even) img {
+/* кожна парна картка: фото праворуч (чергування) */
+.article:nth-child(even) > img,
+.article:nth-child(even) > .photo-slot {
     order: 2;
 }
 
-.article img {
+.article > img {
     display: block;
     width: 100%;
     max-height: 20rem;
@@ -32,43 +80,189 @@ nav.bottom_info a[aria-current="page"] {
 }
 
 .article h2 {
-    margin: 0 0 0.25rem;
+    margin: 0 0 0.75rem;
     font-size: 1.5rem;
-}
-
-.article-meta {
-    margin: 0 0 1rem;
-    font-size: 0.95rem;
-    color: rgba(27, 34, 48, 0.65);
+    line-height: 1.3;
 }
 
 .article p {
     margin: 0 0 0.75rem;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
+}
+
+.article p:last-child {
+    margin-bottom: 0;
 }
 
 
-.back-home a {
-    display: inline-block;
-    padding: 0.6rem 1.4rem;
+/* ---------------------------------------------------------
+   4. РЯДОК З ТЕГОМ І ЧАСОМ ЧИТАННЯ
+   --------------------------------------------------------- */
+.article-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin: 0 0 0.6rem;
+    font-size: 0.9rem;
+    color: rgba(27, 34, 48, 0.62);
+}
+
+/* тег-категорія: скляна "таблетка", як підписи блоків у формі */
+.article-meta .tag {
+    padding: 0.2rem 0.8rem;
+    font-weight: 700;
+    color: #0f7a71;
+    background: rgba(23, 163, 152, 0.12);
+    border: 1px solid rgba(23, 163, 152, 0.30);
     border-radius: 999px;
-    background: rgba(255, 255, 255, 0.72);
-    border: 1px solid rgba(255, 255, 255, 0.9);
-    box-shadow: 0 8px 24px rgba(27, 34, 48, 0.12);
-    color: #1B2230;
-    text-decoration: none;
-    transition: background 0.2s;
 }
 
 
-.back-home {
-    position: fixed;                 
-    bottom: 1rem;                    
-    left: 50%;
-    transform: translateX(-50%);     
-    margin: 0;
-    width: max-content;
+/* ---------------------------------------------------------
+   5. СПИСОК, ПРИМІТКА, ДЖЕРЕЛА
+   --------------------------------------------------------- */
+.article-list {
+    margin: 0 0 0.75rem;
+    padding: 0;
+    list-style: none;
+}
 
+.article-list li {
+    padding: 0.55rem 0;
+    font-size: 1rem;
+    border-bottom: 1px solid rgba(27, 34, 48, 0.08);
+}
+
+.article-list li:last-child {
+    border-bottom: none;
+}
+
+.article .article-note {
+    font-size: 0.9rem;
+    color: rgba(27, 34, 48, 0.62);
+}
+
+.article .article-source {
+    margin-top: 1rem;
+    padding-top: 0.75rem;
+    font-size: 0.85rem;
+    color: rgba(27, 34, 48, 0.62);
+    border-top: 1px solid rgba(27, 34, 48, 0.08);
+}
+
+.article-source a,
+.figure-note a {
+    color: #0f7a71;
+    text-underline-offset: 0.15em;
+}
+
+.article-source a:hover,
+.figure-note a:hover {
+    color: #17A398;
+}
+
+
+/* ---------------------------------------------------------
+   6. ЗАТИЧКА ДЛЯ ФОТО (.photo-slot)
+   Замініть <div class="photo-slot"> на <img src="..."> - і готово.
+   --------------------------------------------------------- */
+.photo-slot {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background:
+        repeating-linear-gradient(135deg,
+            rgba(23, 163, 152, 0.07) 0 12px,
+            rgba(23, 163, 152, 0.02) 12px 24px),
+        rgba(241, 244, 247, 0.9);
+    border: 2px dashed rgba(23, 163, 152, 0.45);
+    border-radius: 1.25rem;
+}
+
+.photo-slot span {
+    padding: 0.35rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #0f7a71;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 999px;
+}
+
+
+/* ---------------------------------------------------------
+   7. ГОЛОВНА СТАТТЯ: текст зверху, порівняння знімків знизу
+   --------------------------------------------------------- */
+.article--feature {
+    grid-template-columns: 1fr;
+    align-items: start;
+    gap: 1.5rem;
+}
+
+.article--feature h2 {
+    font-size: 1.85rem;
+}
+
+.article--feature .article-body {
+    max-width: 68ch;
+}
+
+/* порівняння двох знімків поруч */
+.compare {
+    margin: 0;
+    padding: 1.25rem;
+    background: rgba(241, 244, 247, 0.65);
+    border: 1px solid rgba(27, 34, 48, 0.08);
+    border-radius: 1.25rem;
+}
+
+.compare-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+}
+
+.compare-item {
+    display: grid;
+    gap: 0.6rem;
+    align-content: start;
+}
+
+.compare-item img {
+    display: block;
+    width: 100%;
+    border-radius: 1.25rem;
+}
+
+.compare figcaption {
+    font-size: 0.95rem;
+    line-height: 1.45;
+}
+
+/* .article .figure-note - щоб перебити загальне правило ".article p" */
+.article .figure-note {
+    margin: 1.1rem 0 0;
+    font-size: 0.9rem;
+    color: rgba(27, 34, 48, 0.7);
+}
+
+.article--feature .article-source {
+    margin-top: 0;
+}
+
+
+/* ---------------------------------------------------------
+   8. ПЛАВАЮЧА КНОПКА "НА ГОЛОВНУ": скло, закріплена знизу
+   --------------------------------------------------------- */
+.back-home {
+    position: fixed;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    width: max-content;
+    margin: 0;
+    padding: 0.4rem;
     background: linear-gradient(135deg,
                 rgba(255, 255, 255, 0.60),
                 rgba(255, 255, 255, 0.22));
@@ -80,12 +274,39 @@ nav.bottom_info a[aria-current="page"] {
         0 12px 32px rgba(27, 34, 48, 0.18),
         inset 0 1px 0 rgba(255, 255, 255, 0.95),
         inset 0 -1px 0 rgba(255, 255, 255, 0.30);
-    padding: 0.4rem;
 }
 
 .back-home a {
     display: block;
     padding: 0.5rem 1.4rem;
+    font-size: 1rem;
+    color: #1B2230;
+    text-decoration: none;
+    border-radius: 999px;
+    transition: background 0.2s;
+}
+
+.back-home a:hover,
+.back-home a:focus-visible {
+    background: rgba(255, 255, 255, 0.65);
+    outline: none;
+}
+
+
+/* ---------------------------------------------------------
+   9. ПОТОЧНИЙ ПУНКТ МЕНЮ
+   --------------------------------------------------------- */
+nav.bottom_info ul {
+    display: flex;                    /* пункти меню в рядок */
+    gap: 0.25rem;
+    margin: 0;
+    padding: 0.4rem;
+    list-style: none;                 /* прибираємо маркери */
+}
+
+nav.bottom_info a {
+    display: block;
+    padding: 0.5rem 1.1rem;
     border-radius: 999px;
     color: #1B2230;
     font-size: 1rem;
@@ -93,25 +314,57 @@ nav.bottom_info a[aria-current="page"] {
     transition: background 0.2s;
 }
 
-.back-home a:hover,
-.back-home a:focus-visible {
-    background: rgba(255, 255, 255, 0.65); 
+nav.bottom_info a:hover,
+nav.bottom_info a:focus-visible {
+    background: rgba(255, 255, 255, 0.65);
     outline: none;
 }
 
-main.content {
-    padding-bottom: 5rem;
+@media (max-width: 600px) {
+    nav.bottom_info {
+        border-radius: 1.5rem;
+    }
+    nav.bottom_info ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
 
+
+/* ---------------------------------------------------------
+   10. МОБІЛЬНА ВЕРСІЯ
+   --------------------------------------------------------- */
 @media (max-width: 700px) {
-    .article {
-        grid-template-columns: 1fr;
-        gap: 1rem;
+    /* навбар у два рядки - збільшуємо відступ зверху */
+    body:has(.articles) {
+        padding-top: 8.5rem;
     }
 
-    .article img,
-    .article:nth-child(even) img {
+    body:has(.articles) header h1 {
+        font-size: 1.9rem;
+    }
+
+    .article {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+        padding: 1.25rem;
+        border-radius: 1.5rem;
+    }
+
+    /* фото завжди над текстом */
+    .article > img,
+    .article > .photo-slot,
+    .article:nth-child(even) > img,
+    .article:nth-child(even) > .photo-slot {
         order: -1;
         max-height: 16rem;
+    }
+
+    .article--feature h2 {
+        font-size: 1.5rem;
+    }
+
+    .compare-grid {
+        grid-template-columns: 1fr;
     }
 }

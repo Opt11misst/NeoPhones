@@ -1,0 +1,307 @@
+/* =========================================================
+   ГОЛОВНА СТОРІНКА (index.html) - повний файл
+   Підключається в index.html після style.css:
+     <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="index.css">
+
+   Стилістика збігається з about.html та articles.html:
+   заголовок по центру, картки з м'якою тінню, бірюзовий акцент.
+   Навбар і базові правила лежать у style.css.
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   1. ШАПКА І ВСТУП: по центру
+   body:has(.phones) > header - тільки шапка сторінки, а не <header> усередині карток
+   --------------------------------------------------------- */
+body:has(.phones) > header {
+    max-width: 760px;
+    margin: 0 auto 1rem;
+    text-align: center;
+}
+
+body:has(.phones) > header h1 {
+    margin: 0;
+    font-size: 2.4rem;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+}
+
+.phones-intro {
+    max-width: 56ch;
+    margin: 0 auto 1.5rem;
+    text-align: center;
+    font-size: 1.15rem;
+    color: rgba(27, 34, 48, 0.78);
+}
+
+main.content:has(.phones) {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-bottom: 3rem;
+}
+
+
+/* ---------------------------------------------------------
+   2. ШВИДКИЙ ПЕРЕХІД ДО МОДЕЛІ: ряд скляних кнопок
+   --------------------------------------------------------- */
+.phone-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+    margin: 0 0 2rem;
+    padding: 0;
+    list-style: none;
+}
+
+.phone-nav a {
+    display: block;
+    padding: 0.45rem 1.1rem;
+    font-size: 0.95rem;
+    color: #1B2230;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid rgba(27, 34, 48, 0.10);
+    border-radius: 999px;
+    box-shadow: 0 4px 12px rgba(27, 34, 48, 0.06);
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.phone-nav a:hover,
+.phone-nav a:focus-visible {
+    background: #fff;
+    border-color: #17A398;
+    outline: none;
+}
+
+/* плавний перехід по якорях, але без анімації для тих, хто її не любить */
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   3. КАРТКА СМАРТФОНА
+   Один смартфон = одна картка з двома рядками:
+   рядок 1 - фото спереду + екран і платформа,
+   рядок 2 - камери + фото ззаду.
+   --------------------------------------------------------- */
+.phones {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.phone {
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 1.75rem;
+    box-shadow:
+        0 18px 48px rgba(27, 34, 48, 0.10),
+        0 2px 6px rgba(27, 34, 48, 0.04);
+    scroll-margin-top: 6rem;          /* щоб навбар не перекривав заголовок після переходу */
+}
+
+.phone-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.phone-head h2 {
+    margin: 0;
+    font-size: 1.8rem;
+    line-height: 1.2;
+}
+
+/* позначка "Новинка": така сама, як теги у статтях */
+.tag {
+    padding: 0.2rem 0.8rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #0f7a71;
+    background: rgba(23, 163, 152, 0.12);
+    border: 1px solid rgba(23, 163, 152, 0.30);
+    border-radius: 999px;
+}
+
+.phone-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+    align-items: center;
+}
+
+/* розділювач між рядком "екран" і рядком "камери" */
+.phone-row + .phone-row {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(27, 34, 48, 0.08);
+}
+
+/* Фото лежать в однаковій м'якій рамці: так png із прозорістю
+   та jpg/webp з власним фоном виглядають як єдиний набір.
+   mix-blend-mode: multiply "розчиняє" білий фон jpg у світло-сірій рамці. */
+.phone-media {
+    display: grid;
+    place-items: center;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    isolation: isolate;
+    background: #F1F4F7;
+    border-radius: 1.25rem;
+}
+
+.phone-media img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+}
+
+
+/* ---------------------------------------------------------
+   4. ХАРАКТЕРИСТИКИ: назва зліва, значення справа
+   --------------------------------------------------------- */
+.specs-title {
+    margin: 0 0 0.25rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0f7a71;
+}
+
+.phone-specs .specs-title:not(:first-child) {
+    margin-top: 1.25rem;
+}
+
+.specs {
+    margin: 0;
+}
+
+.specs > div {
+    display: grid;
+    grid-template-columns: 9rem minmax(0, 1fr);
+    gap: 0.75rem;
+    padding: 0.55rem 0;
+    border-bottom: 1px solid rgba(27, 34, 48, 0.08);
+}
+
+.specs > div:last-child {
+    border-bottom: none;
+}
+
+.specs dt {
+    font-size: 0.95rem;
+    color: rgba(27, 34, 48, 0.62);
+}
+
+.specs dd {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.phone-note {
+    margin: 1.25rem 0 0;
+    padding-top: 1rem;
+    font-size: 0.9rem;
+    color: rgba(27, 34, 48, 0.62);
+    border-top: 1px solid rgba(27, 34, 48, 0.08);
+}
+
+
+/* ---------------------------------------------------------
+   5. ДЖЕРЕЛА
+   --------------------------------------------------------- */
+.sources {
+    margin-top: 1.5rem;
+    padding: 1.5rem 2rem;
+    background: rgba(241, 244, 247, 0.65);
+    border: 1px solid rgba(27, 34, 48, 0.08);
+    border-radius: 1.25rem;
+}
+
+.sources h2 {
+    margin: 0 0 0.75rem;
+    font-size: 1.1rem;
+}
+
+.sources ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.4rem 1.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sources li {
+    font-size: 0.9rem;
+}
+
+.sources a {
+    color: #0f7a71;
+    text-underline-offset: 0.15em;
+}
+
+.sources a:hover {
+    color: #17A398;
+}
+
+
+/* ---------------------------------------------------------
+   6. МОБІЛЬНА ВЕРСІЯ
+   --------------------------------------------------------- */
+@media (max-width: 700px) {
+    /* навбар у два рядки - збільшуємо відступ зверху */
+    body:has(.phones) {
+        padding-top: 8.5rem;
+    }
+
+    body:has(.phones) > header h1 {
+        font-size: 1.9rem;
+    }
+
+    .phone {
+        padding: 1.25rem;
+        border-radius: 1.5rem;
+        scroll-margin-top: 9rem;
+    }
+
+    .phone-head h2 {
+        font-size: 1.5rem;
+    }
+
+    .phone-row {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    /* фото завжди над характеристиками */
+    .phone-media {
+        order: -1;
+        aspect-ratio: 4 / 3;
+    }
+
+    .specs > div {
+        grid-template-columns: 7.5rem minmax(0, 1fr);
+        gap: 0.5rem;
+    }
+
+    .sources {
+        padding: 1.25rem;
+    }
+
+    .sources ul {
+        grid-template-columns: 1fr;
+    }
+}
