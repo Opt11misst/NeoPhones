@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Складений смартфон (ілюстрація)">
+  <defs>
+    <linearGradient id="bfold8c" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#232b3d"/><stop offset="1" stop-color="#000" stop-opacity=".35"/></linearGradient>
+    <linearGradient id="sfold8c" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2b1f6b"/><stop offset="1" stop-color="#c0568a"/></linearGradient>
+    <radialGradient id="shfold8c" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#1B2230" stop-opacity=".28"/><stop offset="1" stop-color="#1B2230" stop-opacity="0"/></radialGradient>
+  </defs>
+  <ellipse cx="200" cy="372" rx="95" ry="12" fill="url(#shfold8c)"/>
+  <rect x="132" y="36" width="136" height="328" rx="30" fill="#232b3d"/>
+  <rect x="132" y="36" width="136" height="328" rx="30" fill="url(#bfold8c)"/>
+  <rect x="139" y="43" width="122" height="314" rx="24" fill="url(#sfold8c)"/>
+  <rect x="152" y="96" width="96" height="44" rx="14" fill="#fff" opacity=".18"/>
+  <rect x="152" y="150" width="44" height="44" rx="14" fill="#fff" opacity=".14"/>
+  <rect x="204" y="150" width="44" height="44" rx="14" fill="#fff" opacity=".14"/>
+  <rect x="152" y="204" width="96" height="70" rx="14" fill="#fff" opacity=".10"/>
+  <rect x="178" y="56" width="44" height="13" rx="6.5" fill="#0b0f16"/>
+  <rect x="172" y="338" width="56" height="4" rx="2" fill="#fff" opacity=".55"/>
+</svg>

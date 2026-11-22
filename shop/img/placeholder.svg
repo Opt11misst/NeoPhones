@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Фото відсутнє">
+  <rect width="400" height="400" fill="#F1F4F7"/>
+  <rect x="140" y="70" width="120" height="260" rx="22" fill="none" stroke="#17A398" stroke-width="6" stroke-dasharray="14 10"/>
+  <circle cx="200" cy="300" r="8" fill="#17A398" opacity=".6"/>
+  <text x="200" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#0f7a71">Фото відсутнє</text>
+</svg>
