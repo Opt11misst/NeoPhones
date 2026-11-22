@@ -1,0 +1,383 @@
+[
+  {
+    "id": 1,
+    "name": "OPPO Find X9 Ultra",
+    "category": "Камерофони",
+    "image": "img/oppofindx9ultra.jpg",
+    "specs": "6.82\" · 7050 мАг · 200 Мп",
+    "variants": [
+      {
+        "id": "oppo-x9u-12-256",
+        "memory": "12/256 ГБ",
+        "version": null,
+        "price": 49999,
+        "inStock": true
+      },
+      {
+        "id": "oppo-x9u-12-512",
+        "memory": "12/512 ГБ",
+        "version": null,
+        "price": 54999,
+        "inStock": true
+      },
+      {
+        "id": "oppo-x9u-16-1tb",
+        "memory": "16/1 ТБ",
+        "version": null,
+        "price": 62999,
+        "inStock": false
+      }
+    ],
+    "highlights": [
+      "Основна й телефото камери по 200 Мп",
+      "QHD+ LTPO екран 144 Гц",
+      "Зарядка 100 Вт"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "OnePlus 15",
+    "category": "Флагмани",
+    "image": "img/oneplus15.jpg",
+    "specs": "6.78\" · 7300 мАг · 165 Гц",
+    "variants": [
+      {
+        "id": "oneplus-15-12-256-cn",
+        "memory": "12/256 ГБ",
+        "version": "Китайська",
+        "price": 31999,
+        "inStock": true
+      },
+      {
+        "id": "oneplus-15-12-256-gl",
+        "memory": "12/256 ГБ",
+        "version": "Глобальна",
+        "price": 35999,
+        "inStock": true
+      },
+      {
+        "id": "oneplus-15-16-512-cn",
+        "memory": "16/512 ГБ",
+        "version": "Китайська",
+        "price": 35999,
+        "inStock": true
+      },
+      {
+        "id": "oneplus-15-16-512-gl",
+        "memory": "16/512 ГБ",
+        "version": "Глобальна",
+        "price": 39999,
+        "inStock": true
+      },
+      {
+        "id": "oneplus-15-16-1tb-cn",
+        "memory": "16/1 ТБ",
+        "version": "Китайська",
+        "price": 40999,
+        "inStock": false
+      },
+      {
+        "id": "oneplus-15-16-1tb-gl",
+        "memory": "16/1 ТБ",
+        "version": "Глобальна",
+        "price": 45999,
+        "inStock": true
+      }
+    ],
+    "highlights": [
+      "Snapdragon 8 Elite Gen 5",
+      "Батарея 7300 мАг, зарядка 120 Вт",
+      "Екран 165 Гц, захист IP69K"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Vivo X300 Ultra",
+    "category": "Камерофони",
+    "image": "img/vivox300ultra.webp",
+    "specs": "6.82\" · 6600 мАг · 200 Мп",
+    "variants": [
+      {
+        "id": "vivo-x300u-12-256",
+        "memory": "12/256 ГБ",
+        "version": null,
+        "price": 47999,
+        "inStock": true
+      },
+      {
+        "id": "vivo-x300u-16-512",
+        "memory": "16/512 ГБ",
+        "version": null,
+        "price": 52999,
+        "inStock": true
+      },
+      {
+        "id": "vivo-x300u-16-1tb",
+        "memory": "16/1 ТБ",
+        "version": null,
+        "price": 59999,
+        "inStock": true
+      }
+    ],
+    "highlights": [
+      "Основна камера 200 Мп",
+      "Яскравість екрана до 4500 ніт",
+      "Зарядка 100 Вт"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Xiaomi 18 Fold",
+    "category": "Складані",
+    "image": "img/Xiaomi18_fold/4157665.jpeg.webp",
+    "specs": "7.58\" · 6000 мАг · 200 Мп",
+    "variants": [
+      {
+        "id": "xiaomi-18-fold-12-256",
+        "memory": "12/256 ГБ",
+        "version": null,
+        "price": 64999,
+        "inStock": true
+      },
+      {
+        "id": "xiaomi-18-fold-16-512",
+        "memory": "16/512 ГБ",
+        "version": null,
+        "price": 71999,
+        "inStock": true
+      },
+      {
+        "id": "xiaomi-18-fold-16-1tb",
+        "memory": "16/1 ТБ",
+        "version": null,
+        "price": 79999,
+        "inStock": false
+      }
+    ],
+    "imageHover": "img/18fold-opened.png",
+    "highlights": [
+      "Розкривається до екрана 7.58\"",
+      "Камера 200 Мп",
+      "Яскравість до 4000 ніт"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Vivo X500 Pro Max",
+    "category": "Камерофони",
+    "image": "img/Vivo_x500Promax/1.jpg",
+    "specs": "6.85\" · 8000 мАг · 144 Гц",
+    "variants": [
+      {
+        "id": "vivo-x500pm-12-256",
+        "memory": "12/256 ГБ",
+        "version": null,
+        "price": 46999,
+        "inStock": true
+      },
+      {
+        "id": "vivo-x500pm-16-512",
+        "memory": "16/512 ГБ",
+        "version": null,
+        "price": 49999,
+        "inStock": false
+      },
+      {
+        "id": "vivo-x500pm-16-1tb",
+        "memory": "16/1 ТБ",
+        "version": null,
+        "price": 56999,
+        "inStock": true
+      }
+    ],
+    "highlights": [
+      "Dimensity 9600 Pro, 2 нм",
+      "Батарея 8000 мАг",
+      "Перископ 200 Мп"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Honor Magic 9 Pro",
+    "category": "Флагмани",
+    "image": "img/Honor_Magic9pro/magic-9-pro-max.jpg",
+    "specs": "6.85\" · 7500 мАг · 200 Мп",
+    "variants": [
+      {
+        "id": "honor-m9p-12-256",
+        "memory": "12/256 ГБ",
+        "version": null,
+        "price": 39999,
+        "inStock": true
+      },
+      {
+        "id": "honor-m9p-12-512",
+        "memory": "12/512 ГБ",
+        "version": null,
+        "price": 42999,
+        "inStock": true
+      },
+      {
+        "id": "honor-m9p-16-1tb",
+        "memory": "16/1 ТБ",
+        "version": null,
+        "price": 49999,
+        "inStock": true
+      }
+    ],
+    "highlights": [
+      "Батарея 7500 мАг",
+      "Бездротова зарядка 80 Вт",
+      "Камери 200 Мп + 200 Мп"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Samsung Galaxy Z Fold8",
+    "category": "Складані",
+    "image": "img/fold8-closed.png",
+    "specs": "7.6\" · 4:3 · 3000 ніт",
+    "variants": [
+      {
+        "id": "fold8-12-256",
+        "memory": "12/256 ГБ",
+        "version": null,
+        "price": 79999,
+        "inStock": true
+      },
+      {
+        "id": "fold8-12-512",
+        "memory": "12/512 ГБ",
+        "version": null,
+        "price": 85999,
+        "inStock": true
+      },
+      {
+        "id": "fold8-12-1tb",
+        "memory": "12/1 ТБ",
+        "version": null,
+        "price": 95999,
+        "inStock": false
+      }
+    ],
+    "imageHover": "img/fold8-opened.jpg",
+    "highlights": [
+      "Розкривається до 7.6\" (4:3)",
+      "Зовнішній екран 5.5\"",
+      "Яскравість до 3000 ніт"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "iPhone 18 Pro",
+    "category": "Флагмани",
+    "image": "img/iphone18pro.jpg",
+    "specs": "Змінна діафрагма f/1.48-f/4.0",
+    "variants": [
+      {
+        "id": "iphone-18-pro-256-jp",
+        "memory": "256 ГБ",
+        "version": "Японська",
+        "price": 59999,
+        "inStock": true
+      },
+      {
+        "id": "iphone-18-pro-256-gl",
+        "memory": "256 ГБ",
+        "version": "Глобальна",
+        "price": 64999,
+        "inStock": true
+      },
+      {
+        "id": "iphone-18-pro-512-jp",
+        "memory": "512 ГБ",
+        "version": "Японська",
+        "price": 67999,
+        "inStock": true
+      },
+      {
+        "id": "iphone-18-pro-512-gl",
+        "memory": "512 ГБ",
+        "version": "Глобальна",
+        "price": 72999,
+        "inStock": true
+      },
+      {
+        "id": "iphone-18-pro-1tb-jp",
+        "memory": "1 ТБ",
+        "version": "Японська",
+        "price": 77999,
+        "inStock": false
+      },
+      {
+        "id": "iphone-18-pro-1tb-gl",
+        "memory": "1 ТБ",
+        "version": "Глобальна",
+        "price": 82999,
+        "inStock": true
+      }
+    ],
+    "highlights": [
+      "Змінна діафрагма f/1.48-f/4.0",
+      "Перша змінна діафрагма в iPhone",
+      "Японська й глобальна версії"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "iPhone Duo",
+    "category": "Складані",
+    "image": "img/duo-closed.png",
+    "specs": "Складаний iPhone · 7.6\" · 4:3 · Перший розкладний смартфон Apple",
+    "variants": [
+      {
+        "id": "iphone-duo-256-jp",
+        "memory": "256 ГБ",
+        "version": "Японська",
+        "price": 89999,
+        "inStock": true
+      },
+      {
+        "id": "iphone-duo-256-gl",
+        "memory": "256 ГБ",
+        "version": "Глобальна",
+        "price": 94999,
+        "inStock": true
+      },
+      {
+        "id": "iphone-duo-512-jp",
+        "memory": "512 ГБ",
+        "version": "Японська",
+        "price": 97999,
+        "inStock": true
+      },
+      {
+        "id": "iphone-duo-512-gl",
+        "memory": "512 ГБ",
+        "version": "Глобальна",
+        "price": 102999,
+        "inStock": false
+      },
+      {
+        "id": "iphone-duo-1tb-jp",
+        "memory": "1 ТБ",
+        "version": "Японська",
+        "price": 109999,
+        "inStock": false
+      },
+      {
+        "id": "iphone-duo-1tb-gl",
+        "memory": "1 ТБ",
+        "version": "Глобальна",
+        "price": 114999,
+        "inStock": true
+      }
+    ],
+    "imageHover": "img/duo-opened.png",
+    "highlights": [
+      "Складаний iPhone",
+      "Розкривається до великого екрана",
+      "Японська й глобальна версії"
+    ]
+  }
+]
