@@ -165,7 +165,7 @@
     "id": 5,
     "name": "Vivo X500 Pro Max",
     "category": "Камерофони",
-    "image": "img/Vivo_x500Promax/1.jpg",
+    "image": "img/1.jpg",
     "specs": "6.85\" · 8000 мАг · 144 Гц",
     "variants": [
       {
@@ -200,7 +200,7 @@
     "id": 6,
     "name": "Honor Magic 9 Pro",
     "category": "Флагмани",
-    "image": "img/Honor_Magic9pro/magic-9-pro-max.jpg",
+    "image": "img/magic-9-pro-max.jpg",
     "specs": "6.85\" · 7500 мАг · 200 Мп",
     "variants": [
       {
